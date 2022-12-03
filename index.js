@@ -22,7 +22,7 @@ function encrypt(){
         return document.getElementById("script").value = newText;
     }
 
-    var errorMessage = (!encrypted)?"⚠️Please Enter a valid key!":"⚠️Encrypt button has already been clicked⚠️<br> Click reset";
+    var errorMessage = (!encrypted)?"⚠️Please Enter a valid key/text!":"⚠️Encrypt button has already been clicked⚠️<br> Click reset";
     return document.querySelector('p').innerHTML = errorMessage;
 };
 
@@ -46,7 +46,7 @@ function decrypt(){
         return document.getElementById("script").value = newText;
     }
 
-    var errorMessage = (!decrypted)?"⚠️Please Enter a valid key!":"⚠️Decrypt button has already been clicked⚠️<br> Click reset";
+    var errorMessage = (!decrypted)?"⚠️Please Enter a valid key/text!":"⚠️Decrypt button has already been clicked⚠️<br> Click reset";
     return document.querySelector('p').innerHTML = errorMessage;
 
 };
