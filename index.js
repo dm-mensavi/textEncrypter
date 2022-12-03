@@ -6,7 +6,7 @@ function encrypt(){
     var key = Number(document.getElementById("keyId").value);
     var text = document.getElementById("script").value;
     
-    if(!encrypted && key > 0 && (key <= 10000)){
+    if(!encrypted && key > 0 && key <= 10000){
 
         var newText = "";
     
@@ -55,5 +55,7 @@ function restore(){
 
     encrypted = false;
     decrypted = false;
+    var text = document.getElementById("script").value;
+    text = text;
     return document.querySelector('p').innerHTML = "⬇️ Enter or paste the text in the field below ⬇️";
 }
