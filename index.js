@@ -55,6 +55,7 @@ function restore(){
 
     encrypted = false;
     decrypted = false;
+    document.getElementById("keyId").value = "";
     return document.querySelector('p').innerHTML = "⬇️ Enter or paste the text in the field below ⬇️";
     
 }
