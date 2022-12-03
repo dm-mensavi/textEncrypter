@@ -56,6 +56,6 @@ function restore(){
     encrypted = false;
     decrypted = false;
     var text = document.getElementById("script").value;
-    text = text;
-    return document.querySelector('p').innerHTML = "⬇️ Enter or paste the text in the field below ⬇️";
+    document.querySelector('p').innerHTML = "⬇️ Enter or paste the text in the field below ⬇️";
+    return document.getElementById("script").value = text;
 }
