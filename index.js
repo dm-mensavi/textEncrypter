@@ -23,7 +23,7 @@ function encrypt(){
     }
 
     var errorMessage = (!encrypted)?"⚠️Please Enter a valid key/text!":"⚠️Encrypt button has already been clicked⚠️<br> Click reset";
-    return document.querySelector('p').innerHTML = errorMessage;
+    return alert(errorMessage);
 };
 
 function decrypt(){
@@ -47,7 +47,7 @@ function decrypt(){
     }
 
     var errorMessage = (!decrypted)?"⚠️Please Enter a valid key/text!":"⚠️Decrypt button has already been clicked⚠️<br> Click reset";
-    return document.querySelector('p').innerHTML = errorMessage;
+    return alert(errorMessage);
 
 };
 
