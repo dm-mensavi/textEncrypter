@@ -14,14 +14,14 @@ h1 {
   color: #fafff9;
 }
 
-p {
+p, label {
   font-family: "Merienda";
   font-weight: 400;
   font-size: 1.2rem;
   color: #fafff9;
 }
 
-textarea {
+textarea, input {
   border-style: inset;
   border-width: 5px;
   border-color: rgba(255, 255, 255, 0.8509803922);
@@ -32,6 +32,18 @@ textarea {
   color: white;
   width: 60%;
   height: 250px;
+}
+
+label {
+  margin-top: 2%;
+}
+
+input {
+  width: 10%;
+  height: 20px;
+  border-width: 3px;
+  margin-top: 2%;
+  margin-left: 1%;
 }
 
 button {
@@ -53,23 +65,38 @@ button:hover {
   text-decoration: none;
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 480px) {
   h1 {
     font-size: 2rem;
     padding-top: 10%;
-    margin: 45px 10px;
+    margin: 20px 10px 40px;
   }
-  p {
+  p, label {
     font-size: 0.8rem;
     margin: 20px 5px 50px;
   }
-  textarea {
+  textarea, input {
     border-width: 3px;
     font-size: 0.7rem;
     width: 70%;
+    margin-bottom: 25px;
   }
   button {
     font-size: 0.7rem;
-    margin: 30px 5px;
+    margin: 25px 5px;
+  }
+  
+  input {
+    border-width: 2px;
+    width: 25%;
+    font-size: 0.7rem;
+  }
+}
+@media screen and (min-width: 780px) {
+  textarea, input {
+    width: 55%;
+  }
+  input {
+    width: 15%;
   }
 }

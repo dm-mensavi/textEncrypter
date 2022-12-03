@@ -48,6 +48,18 @@ textarea
     width: 70%
     height: 250px
 
+label
+    @extend p
+    margin-top: 2%
+
+input
+    @extend textarea
+    width: 10%
+    height: 20px
+    border-width: 3px
+    margin-top: 2%
+    margin-left: 1% 
+
 button
   background: #e096ff
   background-image: -webkit-linear-gradient(top,  $colorR1, $colorR2)
@@ -78,11 +90,11 @@ button:hover
   background-image: linear-gradient(to bottom, $colorG1, $colorG2)
   text-decoration: none
 
-@media screen and (max-width: 450px) 
+@media screen and (max-width: 480px) 
     h1
         font-size: 2rem
         padding-top: 10%
-        margin: 45px 10px
+        margin: 20px 10px 40px
 
     p
         font-size: .8rem
@@ -92,7 +104,20 @@ button:hover
         border-width: 3px
         font-size: .7rem
         width: 70%
+        margin-bottom: 25px
 
     button
         font-size: .7rem
-        margin: 30px 5px
+        margin: 25px 5px
+
+    input
+        border-width: 2px
+        width: 25%
+        font-size: .7rem
+
+@media screen and (min-width: 780px)
+    textarea
+        width: 55%
+
+    input
+        width: 15%

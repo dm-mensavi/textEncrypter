@@ -1,37 +1,59 @@
-
+var encrypted = false;
+var decrypted = false;
 
 function encrypt(){
 
+    var key = Number(document.getElementById("keyId").value);
     var text = document.getElementById("script").value;
-    var newText = "";
+    
+    if(!encrypted && key > 0 && (key <= 10000)){
 
-    for (var i = 0; i < text.length; i++) {
-        var initialCode = text.codePointAt(i);
-        var index = initialCode - 7;
-        var newLetter = String.fromCodePoint(index);
-            newText += newLetter;   
+        var newText = "";
+    
+        for (var i = 0; i < text.length; i++) {
+            var initialCode = text.codePointAt(i);
+            var index = initialCode + key;
+            var newLetter = String.fromCodePoint(index);
+                newText += newLetter;   
+        }
+    
+        document.querySelector('p').innerHTML = "Text seccessfully Encrypted 🎆🎉"
+        encrypted = true;
+        return document.getElementById("script").value = newText;
     }
-    document.querySelector('p').innerHTML = "Text seccessfully Encrypted 🎆🎉"
-    return document.getElementById("script").value = newText;
+
+    var errorMessage = (!encrypted)?"⚠️Please Enter a valid key!":"⚠️Encrypt button has already been clicked⚠️<br> Click reset";
+    return document.querySelector('p').innerHTML = errorMessage;
 };
 
 function decrypt(){
+    var key = Number(document.getElementById("keyId").value);
     var text = document.getElementById("script").value;
-    var newText = "";
 
-    for (var i = 0; i < text.length; i++) {
-        var initialCode = text.codePointAt(i);
-        var index = initialCode + 7;
-        var newLetter = String.fromCodePoint(index);
-            newText += newLetter;   
+    if(!decrypted && key > 0 && key < 10000){
+
+        var newText = "";
+    
+        for (var i = 0; i < text.length; i++) {
+            var initialCode = text.codePointAt(i);
+            var index = initialCode - key;
+            var newLetter = String.fromCodePoint(index);
+                newText += newLetter;   
+        }
+    
+        decrypted = true;
+        document.querySelector('p').innerHTML = "Text seccessfully Decrypted 🎆🎉"
+        return document.getElementById("script").value = newText;
     }
 
-    document.querySelector('p').innerHTML = "Text seccessfully Decrypted 🎆🎉"
-    return document.getElementById("script").value = newText;
+    var errorMessage = (!decrypted)?"⚠️Please Enter a valid key!":"⚠️Decrypt button has already been clicked⚠️<br> Click reset";
+    return document.querySelector('p').innerHTML = errorMessage;
 
 };
 
 function restore(){
 
+    encrypted = false;
+    decrypted = false;
     return document.querySelector('p').innerHTML = "⬇️ Enter or paste the text in the field below ⬇️";
 }
