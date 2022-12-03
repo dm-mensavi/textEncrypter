@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Aladin&family=Kenia&family=Lakki+Reddy&family=Merienda:wght@300;400;500;600;700;800;900&family=Montserrat:ital,wght@0,400;0,800;0,900;1,300&display=swap')
+
+$textcolor: #fafff9
+$font: "Merienda"
+$colorR1: #5a5a5a
+$colorR2: #000000ce
+$colorG1: #0000007d
+$colorG2: #4f4f4f
+
+
+
+body
+    background-color: rgba(43, 45, 43, 0.9)
+    text-align: center
+    // padding: 7%
+
+h1
+    padding:
+        top: 3%
+        bottom: 1% 
+
+    font:
+        family: $font
+        size: 4rem
+        weight: 900
+    letter-spacing: .2rem
+    color: $textcolor
+
+p
+    font: 
+        family: $font
+        weight: 400
+        size: 1.2rem
+    color: $textcolor
+
+    
+textarea
+    border: 
+        style: inset
+        width: 5px 
+        color: #ffffffd9        
+    font: 
+        family: Montserrat
+        size: 1rem
+        weight: 500
+    background-color: rgba(47, 49, 47, 0.327)
+    color: white
+    width: 70%
+    height: 250px
+
+button
+  background: #e096ff
+  background-image: -webkit-linear-gradient(top,  $colorR1, $colorR2)
+  background-image: -moz-linear-gradient(top, $colorR1, $colorR2 )
+  background-image: -ms-linear-gradient(top, $colorR1, $colorR2 )
+  background-image: -o-linear-gradient(top, $colorR1, $colorR2 )
+  background-image: linear-gradient(to bottom, $colorR1, $colorR2 )
+  -webkit-border-radius: 28
+  -moz-border-radius: 28
+  border-radius: 28px
+  -webkit-box-shadow: 0px 1px 3px #666666
+  -moz-box-shadow: 0px 1px 3px #666666
+  box-shadow: 0px 1px 3px #666666
+  font-family: $font
+  color: #ffffff
+  font-size: 1.2rem
+  padding: 5px 10px
+  text-decoration: none
+  margin: 30px 25px
+
+
+button:hover 
+  background: #f0c8f0
+  background-image: -webkit-linear-gradient(top, $colorG1, $colorG2)
+  background-image: -moz-linear-gradient(top, $colorG1, $colorG2)
+  background-image: -ms-linear-gradient(top, $colorG1, $colorG2)
+  background-image: -o-linear-gradient(top, $colorG1, $colorG2)
+  background-image: linear-gradient(to bottom, $colorG1, $colorG2)
+  text-decoration: none
+
+@media screen and (max-width: 450px) 
+    h1
+        font-size: 2rem
+        padding-top: 10%
+        margin: 45px 10px
+
+    p
+        font-size: .8rem
+        margin: 20px 5px 50px
+
+    textarea
+        border-width: 3px
+        font-size: .7rem
+        width: 70%
+
+    button
+        font-size: .7rem
+        margin: 30px 5px
